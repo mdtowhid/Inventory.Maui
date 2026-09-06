@@ -1,11 +1,12 @@
 ﻿using Dapper;
 using Inventory.Domain.Entities;
 using Inventory.Domain.Enums;
-using Inventory.Domain.Interfaces;
-using Inventory.Infrastructure.Data;
+using InventorySystem.Domain.Entities;
+using InventorySystem.Domain.Interfaces;
+using InventorySystem.Infrastructure.Data;
 using System.Data;
 
-namespace Inventory.Infrastructure.Repositories;
+namespace InventorySystem.Infrastructure.Repositories;
 
 public class InventoryRepository : GenericRepository<InventoryItem>, IInventoryRepository
 {
@@ -17,14 +18,14 @@ public class InventoryRepository : GenericRepository<InventoryItem>, IInventoryR
     public async Task<InventoryItem?> GetByProductIdAsync(int productId)
     {
         using var connection = _connectionFactory.CreateConnection();
-        var query = "SELECT * FROM Inventory WHERE ProductId = @ProductId";
+        var query = "SELECT * FROM InventoryItems WHERE ProductId = @ProductId";
         return await connection.QueryFirstOrDefaultAsync<InventoryItem>(query, new { ProductId = productId });
     }
 
     public async Task<int> GetAvailableQuantityAsync(int productId)
     {
         using var connection = _connectionFactory.CreateConnection();
-        var query = "SELECT (Quantity - ReservedQuantity) FROM Inventory WHERE ProductId = @ProductId";
+        var query = "SELECT (Quantity - ReservedQuantity) FROM InventoryItems WHERE ProductId = @ProductId";
         var result = await connection.ExecuteScalarAsync<int?>(query, new { ProductId = productId });
         return result ?? 0;
     }

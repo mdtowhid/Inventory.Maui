@@ -13,7 +13,6 @@ public class RequestLoggingMiddleware
 
     public async Task InvokeAsync(HttpContext context)
     {
-        // Log request
         _logger.LogInformation(
             "HTTP {Method} {Path} started",
             context.Request.Method,

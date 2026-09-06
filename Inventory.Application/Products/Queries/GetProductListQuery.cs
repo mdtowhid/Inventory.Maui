@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
-using Inventory.Domain.Entities;
-using Inventory.Domain.Interfaces;
+using Inventory.Application.Products;
+using InventorySystem.Application.Products;
+using InventorySystem.Domain.Entities;
+using InventorySystem.Domain.Interfaces;
 using MediatR;
 
-namespace InventorySystem.Application.Products.Queries;
+namespace Inventory.Application.Products.Queries;
 
 public class GetProductListQuery : IRequest<PagedResult<ProductDto>>
 {
@@ -31,7 +33,6 @@ public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, P
     {
         IEnumerable<Product> products;
 
-        // Apply filters
         if (!string.IsNullOrEmpty(request.SearchTerm))
         {
             products = await _productRepository.SearchProductsAsync(request.SearchTerm);
@@ -50,7 +51,6 @@ public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, P
             products = products.Where(p => p.IsActive == request.IsActive.Value);
         }
 
-        // Apply sorting
         var productList = products.ToList();
         if (!string.IsNullOrEmpty(request.SortBy))
         {
@@ -63,7 +63,6 @@ public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, P
             }
         }
 
-        // Apply pagination
         var totalCount = productList.Count;
         var pagedItems = productList
             .Skip((request.PageNumber - 1) * request.PageSize)

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using Inventory.Domain.Entities;
-using Inventory.Domain.Interfaces;
 using InventorySystem.Application.Products;
 using InventorySystem.Domain.Entities;
 using InventorySystem.Domain.Interfaces;

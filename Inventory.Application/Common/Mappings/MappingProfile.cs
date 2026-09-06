@@ -14,16 +14,16 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        // Product mappings without InventoryItem navigation
+        // Product mappings - FIXED: Remove InventoryItem references
         CreateMap<Product, ProductDto>()
             .ForMember(dest => dest.CategoryName,
                 opt => opt.MapFrom(src => src.Category != null ? src.Category.Name : null))
             .ForMember(dest => dest.SupplierName,
                 opt => opt.MapFrom(src => src.Supplier != null ? src.Supplier.Name : null))
             .ForMember(dest => dest.CurrentStock,
-                opt => opt.Ignore())  // Ignore if property doesn't exist
+                opt => opt.Ignore())  // Will be set separately
             .ForMember(dest => dest.AvailableStock,
-                opt => opt.Ignore()); // Ignore if property doesn't exist
+                opt => opt.Ignore()); // Will be set separately
 
         CreateMap<CreateProductCommand, Product>();
         CreateMap<UpdateProductCommand, Product>();
@@ -31,16 +31,16 @@ public class MappingProfile : Profile
         // Category mappings
         CreateMap<Category, CategoryDto>();
 
-        // Inventory mappings - you'll need to get product name from a separate query
+        // Inventory mappings
         CreateMap<InventoryItem, InventoryDto>()
             .ForMember(dest => dest.ProductName,
-                opt => opt.Ignore())
+                opt => opt.MapFrom(src => src.Product != null ? src.Product.Name : string.Empty))
             .ForMember(dest => dest.ProductCode,
-                opt => opt.Ignore());
+                opt => opt.MapFrom(src => src.Product != null ? src.Product.Code : string.Empty));
 
         CreateMap<InventoryMovement, InventoryMovementDto>()
             .ForMember(dest => dest.ProductName,
-                opt => opt.Ignore())
+                opt => opt.MapFrom(src => src.Product != null ? src.Product.Name : string.Empty))
             .ForMember(dest => dest.MovementTypeName,
                 opt => opt.MapFrom(src => src.MovementType.ToString()));
 

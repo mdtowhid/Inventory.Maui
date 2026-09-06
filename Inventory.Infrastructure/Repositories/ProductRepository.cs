@@ -1,9 +1,9 @@
 ﻿using Dapper;
-using Inventory.Domain.Entities;
-using Inventory.Domain.Interfaces;
-using Inventory.Infrastructure.Data;
+using InventorySystem.Domain.Entities;
+using InventorySystem.Domain.Interfaces;
+using InventorySystem.Infrastructure.Data;
 
-namespace Inventory.Infrastructure.Repositories;
+namespace InventorySystem.Infrastructure.Repositories;
 
 public class ProductRepository : GenericRepository<Product>, IProductRepository
 {
@@ -32,7 +32,7 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
         var query = @"
             SELECT p.* 
             FROM Products p
-            INNER JOIN Inventory i ON p.Id = i.ProductId
+            INNER JOIN InventoryItems i ON p.Id = i.ProductId
             WHERE i.Quantity <= @Threshold 
               AND p.IsDeleted = 0
               AND p.IsActive = 1

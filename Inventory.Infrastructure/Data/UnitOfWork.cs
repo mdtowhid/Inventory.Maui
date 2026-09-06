@@ -1,9 +1,10 @@
 ﻿using Dapper;
-using Inventory.Domain.Interfaces;
+using InventorySystem.Domain.Interfaces;
+using InventorySystem.Infrastructure.Repositories;
 using Microsoft.Data.SqlClient;
 using System.Data;
 
-namespace Inventory.Infrastructure.Data;
+namespace InventorySystem.Infrastructure.Data;
 
 public class UnitOfWork : IUnitOfWork
 {

@@ -1,9 +1,8 @@
 ﻿using Dapper;
-using Inventory.Domain.Interfaces;
-using Inventory.Infrastructure.Data;
+using InventorySystem.Domain.Interfaces;
+using InventorySystem.Infrastructure.Data;
 using System.Data;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace InventorySystem.Infrastructure.Repositories;
 
