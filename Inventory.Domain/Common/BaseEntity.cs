@@ -1,0 +1,17 @@
+﻿namespace Inventory.Domain.Common;
+
+public abstract class BaseEntity
+{
+    public int Id { get; set; }
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime? UpdatedAt { get; set; }
+    public int? CreatedBy { get; set; }
+    public int? UpdatedBy { get; set; }
+    public bool IsDeleted { get; set; } = false;
+}
+
+public interface IAuditableEntity
+{
+    DateTime CreatedAt { get; set; }
+    int? CreatedBy { get; set; }
+}
