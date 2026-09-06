@@ -1,12 +1,12 @@
 ﻿using Dapper;
 using Inventory.Domain.Entities;
 using Inventory.Domain.Enums;
-using InventorySystem.Domain.Entities;
-using InventorySystem.Domain.Interfaces;
-using InventorySystem.Infrastructure.Data;
+using Inventory.Domain.Entities;
+using Inventory.Domain.Interfaces;
+using Inventory.Infrastructure.Data;
 using System.Data;
 
-namespace InventorySystem.Infrastructure.Repositories;
+namespace Inventory.Infrastructure.Repositories;
 
 public class InventoryRepository : GenericRepository<InventoryItem>, IInventoryRepository
 {

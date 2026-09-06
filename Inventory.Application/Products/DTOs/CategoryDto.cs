@@ -1,4 +1,4 @@
-﻿namespace InventorySystem.Application.Products;
+﻿namespace Inventory.Application.Products;
 
 public class CategoryDto
 {

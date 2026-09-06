@@ -1,4 +1,4 @@
-﻿namespace InventorySystem.Application.Auth;
+﻿namespace Inventory.Application.Auth;
 
 public class UserDto
 {

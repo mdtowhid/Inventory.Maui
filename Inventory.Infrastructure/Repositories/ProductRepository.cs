@@ -1,9 +1,9 @@
 ﻿using Dapper;
-using InventorySystem.Domain.Entities;
-using InventorySystem.Domain.Interfaces;
-using InventorySystem.Infrastructure.Data;
+using Inventory.Domain.Entities;
+using Inventory.Domain.Interfaces;
+using Inventory.Infrastructure.Data;
 
-namespace InventorySystem.Infrastructure.Repositories;
+namespace Inventory.Infrastructure.Repositories;
 
 public class ProductRepository : GenericRepository<Product>, IProductRepository
 {

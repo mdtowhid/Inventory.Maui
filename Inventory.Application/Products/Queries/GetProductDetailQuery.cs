@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Inventory.Application.Common.Exceptions;
 using Inventory.Application.Products;
-using InventorySystem.Application.Products;
-using InventorySystem.Domain.Entities;
-using InventorySystem.Domain.Interfaces;
+using Inventory.Application.Products;
+using Inventory.Domain.Entities;
+using Inventory.Domain.Interfaces;
 using MediatR;
 
 namespace Inventory.Application.Products.Queries;

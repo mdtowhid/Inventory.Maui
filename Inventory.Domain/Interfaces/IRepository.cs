@@ -1,9 +1,9 @@
 ﻿using Inventory.Domain.Entities;
 using Inventory.Domain.Enums;
-using InventorySystem.Domain.Entities;
+using Inventory.Domain.Entities;
 using System.Linq.Expressions;
 
-namespace InventorySystem.Domain.Interfaces;
+namespace Inventory.Domain.Interfaces;
 
 public interface IRepository<T> where T : class
 {

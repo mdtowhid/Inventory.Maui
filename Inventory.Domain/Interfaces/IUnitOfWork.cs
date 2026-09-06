@@ -1,6 +1,6 @@
-﻿using InventorySystem.Domain.Interfaces;
+﻿using Inventory.Domain.Interfaces;
 
-namespace InventorySystem.Domain.Interfaces;
+namespace Inventory.Domain.Interfaces;
 
 public interface IUnitOfWork : IDisposable
 {

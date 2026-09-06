@@ -1,9 +1,9 @@
 ﻿using Inventory.Application.Common.Exceptions;
-using InventorySystem.Domain.Entities;
-using InventorySystem.Domain.Interfaces;
+using Inventory.Domain.Entities;
+using Inventory.Domain.Interfaces;
 using MediatR;
 
-namespace InventorySystem.Application.Products.Commands;
+namespace Inventory.Application.Products.Commands;
 
 public class DeleteProductCommand : IRequest<bool>
 {

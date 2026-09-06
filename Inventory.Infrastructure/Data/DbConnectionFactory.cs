@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
 
-namespace InventorySystem.Infrastructure.Data;
+namespace Inventory.Infrastructure.Data;
 
 public interface IDbConnectionFactory
 {

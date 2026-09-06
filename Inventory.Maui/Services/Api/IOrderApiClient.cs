@@ -1,5 +1,5 @@
-﻿using InventorySystem.Application.Orders;
-using InventorySystem.Application.Products;
+﻿using Inventory.Application.Orders;
+using Inventory.Application.Products;
 using Refit;
 
 namespace Inventory.Maui.Services.Api;

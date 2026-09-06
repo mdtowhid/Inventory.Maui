@@ -1,4 +1,4 @@
-﻿namespace InventorySystem.Application.Inventory;
+﻿namespace Inventory.Application.Inventory;
 
 public class InventoryDto
 {

@@ -1,8 +1,8 @@
 ﻿using Inventory.Application.Products;
 using Inventory.Application.Products.Commands;
 using Inventory.Application.Products.Queries;
-using InventorySystem.Application.Products;
-using InventorySystem.Application.Products.Commands;
+using Inventory.Application.Products;
+using Inventory.Application.Products.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

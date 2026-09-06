@@ -5,7 +5,7 @@ using CommunityToolkit.Maui;
 using Refit;
 using Inventory.Maui.Services;
 using Inventory.Maui.Services.Api;
-using Inventory.Application;  // ✅ This is correct (not InventorySystem.Application)
+using Inventory.Application;  // ✅ This is correct (not Inventory.Application)
 
 namespace Inventory.Maui;
 

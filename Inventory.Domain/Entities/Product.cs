@@ -1,7 +1,7 @@
 ﻿using Inventory.Domain.Common;
 using Inventory.Domain.Entities;
 
-namespace InventorySystem.Domain.Entities;
+namespace Inventory.Domain.Entities;
 
 public class Product : BaseEntity
 {

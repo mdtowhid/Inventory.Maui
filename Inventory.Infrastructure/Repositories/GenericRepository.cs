@@ -1,10 +1,10 @@
 ﻿using Dapper;
-using InventorySystem.Domain.Interfaces;
-using InventorySystem.Infrastructure.Data;
+using Inventory.Domain.Interfaces;
+using Inventory.Infrastructure.Data;
 using System.Data;
 using System.Linq.Expressions;
 
-namespace InventorySystem.Infrastructure.Repositories;
+namespace Inventory.Infrastructure.Repositories;
 
 public class GenericRepository<T> : IRepository<T> where T : class
 {

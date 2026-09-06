@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Inventory.Application.Products;
-using InventorySystem.Application.Products;
-using InventorySystem.Domain.Interfaces;
+using Inventory.Application.Products;
+using Inventory.Domain.Interfaces;
 using MediatR;
 
 namespace Inventory.Application.Products.Queries;

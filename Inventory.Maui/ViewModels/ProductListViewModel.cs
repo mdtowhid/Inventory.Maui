@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Inventory.Maui.Services;
 using Inventory.Maui.Services.Api;
-using InventorySystem.Application.Products;
+using Inventory.Application.Products;
 using System.Collections.ObjectModel;
 
 namespace Inventory.Maui.ViewModels.Products;

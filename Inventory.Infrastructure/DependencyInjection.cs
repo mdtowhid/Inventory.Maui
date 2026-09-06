@@ -1,9 +1,9 @@
-﻿using InventorySystem.Domain.Interfaces;
-using InventorySystem.Infrastructure.Data;
-using InventorySystem.Infrastructure.Repositories;
+﻿using Inventory.Domain.Interfaces;
+using Inventory.Infrastructure.Data;
+using Inventory.Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace InventorySystem.Infrastructure;
+namespace Inventory.Infrastructure;
 
 public static class DependencyInjection
 {

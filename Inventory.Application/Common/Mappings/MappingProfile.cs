@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using Inventory.Application.Products.Commands;
 using Inventory.Domain.Entities;
-using InventorySystem.Application.Auth;
-using InventorySystem.Application.Inventory;
-using InventorySystem.Application.Orders;
-using InventorySystem.Application.Products;
-using InventorySystem.Application.Products.Commands;
-using InventorySystem.Domain.Entities;
+using Inventory.Application.Auth;
+using Inventory.Application.Inventory;
+using Inventory.Application.Orders;
+using Inventory.Application.Products;
+using Inventory.Application.Products.Commands;
+using Inventory.Domain.Entities;
 
-namespace InventorySystem.Application.Common.Mappings;
+namespace Inventory.Application.Common.Mappings;
 
 public class MappingProfile : Profile
 {

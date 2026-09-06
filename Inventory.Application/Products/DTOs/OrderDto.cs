@@ -1,4 +1,4 @@
-﻿namespace InventorySystem.Application.Orders;
+﻿namespace Inventory.Application.Orders;
 
 public class OrderDto
 {

@@ -1,5 +1,5 @@
 ﻿using Inventory.Domain.Common;
-using InventorySystem.Domain.Entities;
+using Inventory.Domain.Entities;
 
 namespace Inventory.Domain.Entities;
 

@@ -1,6 +1,6 @@
 ﻿using Inventory.Application.Products.Commands;
-using InventorySystem.Application.Products;
-using InventorySystem.Application.Products.Commands;
+using Inventory.Application.Products;
+using Inventory.Application.Products.Commands;
 using Refit;
 
 namespace Inventory.Maui.Services.Api;

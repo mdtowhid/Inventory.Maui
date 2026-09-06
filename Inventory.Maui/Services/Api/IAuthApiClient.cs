@@ -1,5 +1,5 @@
 ﻿using Refit;
-using InventorySystem.Application.Auth;
+using Inventory.Application.Auth;
 
 namespace Inventory.Maui.Services.Api;
 
